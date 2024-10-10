@@ -1,3 +1,5 @@
+![logo.png](assets/images/xlarge.png)
+
 # OpenAI Speech
 
 Allows you to use the OpenAI API to generate speech from text. The resulting file will be uploaded to your Homey's FTP.
