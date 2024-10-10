@@ -1,0 +1,6 @@
+{
+  "extends": "athom/homey-app",
+  "rules": {
+    "import/extensions": "off"
+  }
+}

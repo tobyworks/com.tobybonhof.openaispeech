@@ -1,0 +1,62 @@
+[
+  {
+    "type": "text",
+    "label": {
+      "en": "OpenAI API Key"
+    },
+    "id": "apiKey",
+    "placeholder": {
+      "en": "e.g., sk-proj-...."
+    }
+  },
+  {
+    "type": "text",
+    "label": {
+      "en": "Host (FTP/HTTP IP)"
+    },
+    "id": "host",
+    "placeholder": {
+      "en": "192.168.0.X"
+    }
+  },
+  {
+    "type": "text",
+    "label": {
+      "en": "FTP Port"
+    },
+    "id": "ftpPort",
+    "placeholder": {
+      "en": "2100"
+    }
+  },
+  {
+    "type": "text",
+    "label": {
+      "en": "FTP Username"
+    },
+    "id": "ftpUser",
+    "placeholder": {
+      "en": "Username"
+    }
+  },
+  {
+    "type": "password",
+    "label": {
+      "en": "FTP Password"
+    },
+    "id": "ftpPassword",
+    "placeholder": {
+      "en": "Password."
+    }
+  },
+  {
+    "type": "text",
+    "label": {
+      "en": "HTTP Port"
+    },
+    "id": "httpPort",
+    "placeholder": {
+      "en": "8000"
+    }
+  }
+]

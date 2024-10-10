@@ -1,0 +1,80 @@
+<html>
+<form class="homey-form" id="openai-speech-form">
+    <fieldset class="homey-form-fieldset">
+        <legend class="homey-form-legend">OpenAI Speech Configuration</legend>
+
+        <div class="homey-form-group">
+            <label class="homey-form-label" for="openai-apikey">OpenAI API Key</label>
+            <input class="homey-form-input" id="openai-apikey" type="text" placeholder="e.g., sk-proj-...." value="" />
+        </div>
+
+        <div class="homey-form-group">
+            <label class="homey-form-label" for="host">Host (FTP/HTTP IP)</label>
+            <input class="homey-form-input" id="host" type="text" placeholder="192.168.0.X" value="" />
+        </div>
+
+        <div class="homey-form-group">
+            <label class="homey-form-label" for="ftp-port">FTP Port</label>
+            <input class="homey-form-input" id="ftp-port" type="text" placeholder="2100" value="2100" />
+        </div>
+
+        <div class="homey-form-group">
+            <label class="homey-form-label" for="ftp-user">FTP Username</label>
+            <input class="homey-form-input" id="ftp-user" type="text" placeholder="Username" />
+        </div>
+
+        <div class="homey-form-group">
+            <label class="homey-form-label" for="ftp-password">FTP Password</label>
+            <input class="homey-form-input" id="ftp-password" type="password" placeholder="Password." />
+        </div>
+
+        <div class="homey-form-group">
+            <label class="homey-form-label" for="http-port">HTTP Port</label>
+            <input class="homey-form-input" id="http-port" type="text" placeholder="8000" value="8000" />
+        </div>
+
+        <div class="homey-form-group">
+            <button class="homey-form-button" type="submit">Save</button>
+        </div>
+
+    </fieldset>
+</form>
+
+<script type="application/javascript">
+  document.getElementById("openai-speech-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get the form values
+    const openAiApiKey = document.getElementById("openai-apikey").value;
+    const host = document.getElementById("host").value;
+    const ftpPort = document.getElementById("ftp-port").value;
+    const ftpUser = document.getElementById("ftp-user").value;
+    const ftpPassword = document.getElementById("ftp-password").value;
+    const httpPort = document.getElementById("http-port").value;
+
+    // Example: Passing form values to create the device
+    Homey.createDevice({
+      name: "OpenAI Speech", // Device name shown to the user
+      data: {
+        id: `${host}-${ftpPort}-${httpPort}-${ftpUser}`, // Unique ID for the device
+      },
+      settings: {
+        apiKey: openAiApiKey,
+        host: host,
+        ftpPort: ftpPort,
+        ftpUser: ftpUser,
+        ftpPassword: ftpPassword,
+        httpPort: httpPort,
+      },
+    })
+      .then(function (result) {
+        console.log("Device created successfully:", result);
+        Homey.done();
+      })
+      .catch(function (error) {
+        console.error("Error creating device:", error);
+        Homey.alert(error);
+      });
+  });
+</script>
+</html>

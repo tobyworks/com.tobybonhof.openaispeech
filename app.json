@@ -1,0 +1,210 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.tobybonhof.openaispeech",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "OpenAI Speech"
+  },
+  "description": {
+    "en": "Generate speech files using OpenAI's GPT-4o model"
+  },
+  "category": [
+    "internet"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Toby Bonhof",
+    "email": "t.bonhof@gmail.com"
+  },
+  "brandColor": "#64C7AD",
+  "flow": {
+    "actions": [
+      {
+        "id": "download-openai-speech",
+        "title": {
+          "en": "Say"
+        },
+        "titleFormatted": {
+          "en": "Create speech for [[sentence]] spoken in [[voice]] and upload as [[filename]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=openai-speech"
+          },
+          {
+            "type": "text",
+            "name": "sentence",
+            "title": {
+              "en": "Sentence"
+            },
+            "placeholder": {
+              "en": "The quick brown fox jumped over the lazy dog!"
+            }
+          },
+          {
+            "type": "dropdown",
+            "name": "voice",
+            "title": {
+              "en": "Voice"
+            },
+            "values": [
+              {
+                "id": "alloy",
+                "title": {
+                  "en": "Alloy"
+                }
+              },
+              {
+                "id": "echo",
+                "title": {
+                  "en": "Echo"
+                }
+              },
+              {
+                "id": "fable",
+                "title": {
+                  "en": "Fable"
+                }
+              },
+              {
+                "id": "onyx",
+                "title": {
+                  "en": "Onyx"
+                }
+              },
+              {
+                "id": "nova",
+                "title": {
+                  "en": "Nova"
+                }
+              },
+              {
+                "id": "shimmer",
+                "title": {
+                  "en": "Shimmer"
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "name": "filename",
+            "title": {
+              "en": "Filename"
+            },
+            "placeholder": {
+              "en": "my_speech.mp3"
+            }
+          }
+        ],
+        "tokens": [
+          {
+            "name": "audioFileUrl",
+            "type": "string",
+            "title": {
+              "en": "Audio File URL"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "OpenAI Speech"
+      },
+      "class": "other",
+      "capabilities": [],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
+      "images": {
+        "small": "/drivers/openai-speech/assets/images/small.png",
+        "large": "/drivers/openai-speech/assets/images/large.png",
+        "xlarge": "/drivers/openai-speech/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "new"
+        }
+      ],
+      "id": "openai-speech",
+      "settings": [
+        {
+          "type": "text",
+          "label": {
+            "en": "OpenAI API Key"
+          },
+          "id": "apiKey",
+          "placeholder": {
+            "en": "e.g., sk-proj-...."
+          }
+        },
+        {
+          "type": "text",
+          "label": {
+            "en": "Host (FTP/HTTP IP)"
+          },
+          "id": "host",
+          "placeholder": {
+            "en": "192.168.0.X"
+          }
+        },
+        {
+          "type": "text",
+          "label": {
+            "en": "FTP Port"
+          },
+          "id": "ftpPort",
+          "placeholder": {
+            "en": "2100"
+          }
+        },
+        {
+          "type": "text",
+          "label": {
+            "en": "FTP Username"
+          },
+          "id": "ftpUser",
+          "placeholder": {
+            "en": "Username"
+          }
+        },
+        {
+          "type": "password",
+          "label": {
+            "en": "FTP Password"
+          },
+          "id": "ftpPassword",
+          "placeholder": {
+            "en": "Password."
+          }
+        },
+        {
+          "type": "text",
+          "label": {
+            "en": "HTTP Port"
+          },
+          "id": "httpPort",
+          "placeholder": {
+            "en": "8000"
+          }
+        }
+      ]
+    }
+  ]
+}

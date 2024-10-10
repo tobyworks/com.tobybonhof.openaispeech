@@ -1,0 +1,89 @@
+{
+  "actions": [
+    {
+      "id": "download-openai-speech",
+      "title": {
+        "en": "Say"
+      },
+      "titleFormatted": {
+        "en": "Create speech for [[sentence]] spoken in [[voice]] and upload as [[filename]]"
+      },
+      "args": [
+        {
+          "type": "text",
+          "name": "sentence",
+          "title": {
+            "en": "Sentence"
+          },
+          "placeholder": {
+            "en": "The quick brown fox jumped over the lazy dog!"
+          }
+        },
+        {
+          "type": "dropdown",
+          "name": "voice",
+          "title": {
+            "en": "Voice"
+          },
+          "values": [
+            {
+              "id": "alloy",
+              "title": {
+                "en": "Alloy"
+              }
+            },
+            {
+              "id": "echo",
+              "title": {
+                "en": "Echo"
+              }
+            },
+            {
+              "id": "fable",
+              "title": {
+                "en": "Fable"
+              }
+            },
+            {
+              "id": "onyx",
+              "title": {
+                "en": "Onyx"
+              }
+            },
+            {
+              "id": "nova",
+              "title": {
+                "en": "Nova"
+              }
+            },
+            {
+              "id": "shimmer",
+              "title": {
+                "en": "Shimmer"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "filename",
+          "title": {
+            "en": "Filename"
+          },
+          "placeholder": {
+            "en": "my_speech.mp3"
+          }
+        }
+      ],
+      "tokens": [
+        {
+          "name": "audioFileUrl",
+          "type": "string",
+          "title": {
+            "en": "Audio File URL"
+          }
+        }
+      ]
+    }
+  ]
+}

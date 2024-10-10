@@ -1,0 +1,29 @@
+{
+  "id": "com.tobybonhof.openaispeech",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "OpenAI Speech"
+  },
+  "description": {
+    "en": "Generate speech files using OpenAI's GPT-4o model"
+  },
+  "category": [
+    "internet"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Toby Bonhof",
+    "email": "t.bonhof@gmail.com"
+  },
+  "brandColor": "#64C7AD"
+}
