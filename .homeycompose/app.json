@@ -1,6 +1,6 @@
 {
   "id": "com.tobybonhof.openaispeech",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -24,5 +24,6 @@
   "author": {
     "name": "Toby Bonhof"
   },
-  "brandColor": "#64C7AD"
+  "brandColor": "#64C7AD",
+  "source": "https://github.com/tobyworks/com.tobybonhof.openaispeech"
 }
